@@ -3,27 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>Ubuntu环境下MediaWiki搭建及配置 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title：Ubuntu环境下MediaWiki搭建及配置author:honodate:2016-11-27 21:22:21
-tags:[mediawiki,环境搭建]mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。
-##准备工作
-Linux环境准备这里用的是ubunt">
+  <meta name="description" content="mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。
+准备工作Linux环境准备这里用的是ubuntu14.04 
+软件包下载XAMPP下载链接
+bitnami预集成mediawiki软件包下载链接
+XAMPP
+XAMPP代表了Apache、MYSQL、PHP等支持linux、w">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2016/11/26/mediawiki搭建/index.html">
+<meta property="og:title" content="Ubuntu环境下MediaWiki搭建及配置">
+<meta property="og:url" content="http://yoursite.com/2016/11/27/mediawiki搭建/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title：Ubuntu环境下MediaWiki搭建及配置author:honodate:2016-11-27 21:22:21
-tags:[mediawiki,环境搭建]mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。
-##准备工作
-Linux环境准备这里用的是ubunt">
-<meta property="og:updated_time" content="2016-11-27T13:49:39.423Z">
+<meta property="og:description" content="mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。
+准备工作Linux环境准备这里用的是ubuntu14.04 
+软件包下载XAMPP下载链接
+bitnami预集成mediawiki软件包下载链接
+XAMPP
+XAMPP代表了Apache、MYSQL、PHP等支持linux、w">
+<meta property="og:updated_time" content="2016-11-27T13:52:11.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="title：Ubuntu环境下MediaWiki搭建及配置author:honodate:2016-11-27 21:22:21
-tags:[mediawiki,环境搭建]mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。
-##准备工作
-Linux环境准备这里用的是ubunt">
+<meta name="twitter:title" content="Ubuntu环境下MediaWiki搭建及配置">
+<meta name="twitter:description" content="mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。
+准备工作Linux环境准备这里用的是ubuntu14.04 
+软件包下载XAMPP下载链接
+bitnami预集成mediawiki软件包下载链接
+XAMPP
+XAMPP代表了Apache、MYSQL、PHP等支持linux、w">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -74,21 +80,28 @@ Linux环境准备这里用的是ubunt">
       <div class="outer">
         <section id="main"><article id="post-mediawiki搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/11/26/mediawiki搭建/" class="article-date">
-  <time datetime="2016-11-26T03:44:13.793Z" itemprop="datePublished">2016-11-26</time>
+    <a href="/2016/11/27/mediawiki搭建/" class="article-date">
+  <time datetime="2016-11-27T13:22:21.000Z" itemprop="datePublished">2016-11-27</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ubuntu环境下MediaWiki搭建及配置
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title：Ubuntu环境下MediaWiki搭建及配置<br>author:hono<br>date:2016-11-27 21:22:21</p>
-<h2 id="tags-mediawiki-环境搭建"><a href="#tags-mediawiki-环境搭建" class="headerlink" title="tags:[mediawiki,环境搭建]"></a>tags:[mediawiki,环境搭建]</h2><p>mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。</p>
-<p>##准备工作</p>
-<h3 id="Linux环境准备"><a href="#Linux环境准备" class="headerlink" title="Linux环境准备"></a>Linux环境准备</h3><p>这里用的是ubuntu14.04 </p>
+        <p>mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="Linux环境准备"><a href="#Linux环境准备" class="headerlink" title="Linux环境准备"></a>Linux环境准备</h3><p>这里用的是ubuntu14.04 </p>
 <h3 id="软件包下载"><a href="#软件包下载" class="headerlink" title="软件包下载"></a>软件包下载</h3><p>XAMPP<a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="external">下载链接</a></p>
 <p>bitnami预集成mediawiki软件包<a href="https://bitnami.com/stack/xampp#mediawiki" target="_blank" rel="external">下载链接</a></p>
 <p><strong>XAMPP</strong></p>
@@ -98,9 +111,11 @@ Linux环境准备这里用的是ubunt">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/26/mediawiki搭建/" data-id="ciw0pd0a60000zwhrat12c1u9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/11/27/mediawiki搭建/" data-id="ciw0pjc290001kshri6h3humh" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mediawiki/">mediawiki</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境搭建/">环境搭建</a></li></ul>
+
     </footer>
   </div>
   
@@ -126,9 +141,23 @@ Linux环境准备这里用的是ubunt">
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/mediawiki/">mediawiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境搭建/">环境搭建</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/mediawiki/" style="font-size: 10px;">mediawiki</a> <a href="/tags/环境搭建/" style="font-size: 10px;">环境搭建</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -147,7 +176,7 @@ Linux环境准备这里用的是ubunt">
       <ul>
         
           <li>
-            <a href="/2016/11/26/mediawiki搭建/">(no title)</a>
+            <a href="/2016/11/27/mediawiki搭建/">Ubuntu环境下MediaWiki搭建及配置</a>
           </li>
         
           <li>
