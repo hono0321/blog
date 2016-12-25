@@ -96,7 +96,7 @@ shebang也可以引用任何系统中的程序来执行文件12#!/">
 这行称为shebang(#she ！bang)，指引系统使用符号后面所跟的shell程序运行文件。一般情况下也可写作如下形式：1#!/usr/bin/evn python
 这种写法以为使用环境变量中的pyhton程序来执行脚本文件，是一种更广泛的写法。
 shebang也可以引用任何系统中的程序来执行文件12#!/">
-<meta property="og:updated_time" content="2016-12-25T14:09:12.489Z">
+<meta property="og:updated_time" content="2016-12-25T15:30:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell编程学习笔记">
 <meta name="twitter:description" content="使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
@@ -326,6 +326,11 @@ shebang也可以引用任何系统中的程序来执行文件12#!/">
 <p>shebang也可以引用任何系统中的程序来执行文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/cat</span></div><div class="line">Hello World!</div></pre></td></tr></table></figure></p>
 <p>编辑完并保存后，需要修改文件权限为可执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod u+x filename</div></pre></td></tr></table></figure></p>
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>shell变量默认都是字符串。<br>变量的引用只需在变量名前加一个$<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a=1</div><div class="line"><span class="built_in">echo</span> <span class="variable">$a</span> \\打印出1</div><div class="line">a=<span class="variable">$a</span>+1</div><div class="line"><span class="built_in">echo</span> <span class="variable">$a</span> \\打印出1+1</div></pre></td></tr></table></figure></p>
+<p>bash里可以用(())来执行C风格的算术表达式，比如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var=0</div><div class="line">(( var += 1)) \\var现在是1</div><div class="line">(( var++ ))  \\var现在是2</div><div class="line">((var = var * var)) \\var现在是4</div><div class="line"><span class="built_in">let</span> <span class="string">'var = var/3'</span>  \\var现在是1</div><div class="line"><span class="built_in">echo</span> $((var +=2 ))  \\var现在是3</div></pre></td></tr></table></figure></p>
+<p>转成C之后空格可以被忽略了</p>
+<h2 id="Shell的流程控制"><a href="#Shell的流程控制" class="headerlink" title="Shell的流程控制"></a>Shell的流程控制</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>if表达式如果条件命令组为真，则执行then后的部分，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span></div><div class="line">    判断命令，可有多个，真假取最后的返回值</div><div class="line"><span class="keyword">then</span></div><div class="line">    如果上述<span class="keyword">if</span>为真做什么</div><div class="line"><span class="keyword">elif</span></div><div class="line">    如果上述<span class="keyword">if</span>为假，继续来做判断</div><div class="line"><span class="keyword">then</span></div><div class="line">    <span class="keyword">elif</span>为真做什么</div><div class="line"><span class="keyword">else</span></div><div class="line">    如果全都为假做什么</div><div class="line"><span class="keyword">fi</span> \\结束</div></pre></td></tr></table></figure></p>
+<p>常用条件测试语句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="_">-f</span> <span class="string">"filename"</span></div><div class="line">    判断是否是一个文件</div><div class="line">-x <span class="string">"/bin/ls"</span></div><div class="line">    判断/bin/ls是否存在并拥有可执行权限</div><div class="line">-n <span class="string">"<span class="variable">$var</span>"</span></div><div class="line">    判断<span class="variable">$var</span>变量是否有值</div><div class="line"><span class="string">"<span class="variable">$a</span>"</span> == <span class="string">"<span class="variable">$b</span>"</span></div><div class="line">    判断<span class="variable">$a</span>和<span class="variable">$b</span>是否相等</div></pre></td></tr></table></figure></p>
+<p>使用help [[和man test命令可查询用法</p>
 
       
     </div>
@@ -481,7 +486,7 @@ shebang也可以引用任何系统中的程序来执行文件12#!/">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell的流程控制"><span class="nav-number">2.</span> <span class="nav-text">Shell的流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if语句"><span class="nav-number">2.1.</span> <span class="nav-text">if语句</span></a></li></ol></li></ol></div>
             
 
           </div>
