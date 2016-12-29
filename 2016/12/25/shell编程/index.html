@@ -84,25 +84,25 @@
 
 
 
-<meta name="description" content="使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
+<meta name="description" content="Shell编程学习笔记和备忘，通过学习和记录了解Linux Shell和Shell编程相关知识。
+使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
 这行称为shebang(#she ！bang)，指引系统使用符号后面所跟的shell程序运行文件。一般情况下也可写作如下形式：1#!/usr/bin/evn python
-这种写法以为使用环境变量中的pyhton程序来执行脚本文件，是一种更广泛的写法。
-shebang也可以引用任何系统中的程序来执行文件12#!/">
+这种写法以为使用环境变量中的pyhton程序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shell编程学习笔记">
+<meta property="og:title" content="Shell编程学习笔记（一）">
 <meta property="og:url" content="http://yoursite.com/2016/12/25/shell编程/index.html">
 <meta property="og:site_name" content="二喵的博客">
-<meta property="og:description" content="使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
+<meta property="og:description" content="Shell编程学习笔记和备忘，通过学习和记录了解Linux Shell和Shell编程相关知识。
+使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
 这行称为shebang(#she ！bang)，指引系统使用符号后面所跟的shell程序运行文件。一般情况下也可写作如下形式：1#!/usr/bin/evn python
-这种写法以为使用环境变量中的pyhton程序来执行脚本文件，是一种更广泛的写法。
-shebang也可以引用任何系统中的程序来执行文件12#!/">
-<meta property="og:updated_time" content="2016-12-25T15:30:59.000Z">
+这种写法以为使用环境变量中的pyhton程序">
+<meta property="og:updated_time" content="2016-12-29T15:32:40.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shell编程学习笔记">
-<meta name="twitter:description" content="使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
+<meta name="twitter:title" content="Shell编程学习笔记（一）">
+<meta name="twitter:description" content="Shell编程学习笔记和备忘，通过学习和记录了解Linux Shell和Shell编程相关知识。
+使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
 这行称为shebang(#she ！bang)，指引系统使用符号后面所跟的shell程序运行文件。一般情况下也可写作如下形式：1#!/usr/bin/evn python
-这种写法以为使用环境变量中的pyhton程序来执行脚本文件，是一种更广泛的写法。
-shebang也可以引用任何系统中的程序来执行文件12#!/">
+这种写法以为使用环境变量中的pyhton程序">
 
 
 
@@ -136,7 +136,7 @@ shebang也可以引用任何系统中的程序来执行文件12#!/">
 
 
 
-  <title> Shell编程学习笔记 | 二喵的博客 </title>
+  <title> Shell编程学习笔记（一） | 二喵的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +271,7 @@ shebang也可以引用任何系统中的程序来执行文件12#!/">
             
             
               
-                Shell编程学习笔记
+                Shell编程学习笔记（一）
               
             
           </h1>
@@ -320,17 +320,45 @@ shebang也可以引用任何系统中的程序来执行文件12#!/">
       
 
       
-        <p>使用文本编辑器编写shell脚本时，需要在第一行添加如下行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div></pre></td></tr></table></figure></p>
+        <p>Shell编程学习笔记和备忘，通过学习和记录了解Linux Shell和Shell编程相关知识。</p>
+<p>使用文本编辑器编写shell脚本时，需要在第一行添加如下行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div></pre></td></tr></table></figure></p>
 <p>这行称为shebang(#she ！bang)，指引系统使用符号后面所跟的shell程序运行文件。<br>一般情况下也可写作如下形式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/evn python</span></div></pre></td></tr></table></figure></p>
-<p>这种写法以为使用环境变量中的pyhton程序来执行脚本文件，是一种更广泛的写法。</p>
+<p>这种写法以为使用环境变量中的pyhton程序来执行脚本文件，是一种更广泛的写法。<a id="more"></a></p>
 <p>shebang也可以引用任何系统中的程序来执行文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/cat</span></div><div class="line">Hello World!</div></pre></td></tr></table></figure></p>
 <p>编辑完并保存后，需要修改文件权限为可执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod u+x filename</div></pre></td></tr></table></figure></p>
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>shell变量默认都是字符串。<br>变量的引用只需在变量名前加一个$<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a=1</div><div class="line"><span class="built_in">echo</span> <span class="variable">$a</span> \\打印出1</div><div class="line">a=<span class="variable">$a</span>+1</div><div class="line"><span class="built_in">echo</span> <span class="variable">$a</span> \\打印出1+1</div></pre></td></tr></table></figure></p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>shell变量默认都是字符串。<br>变量的引用只需在变量名前加一个$<br>变量名和等号之间不能有空格<br>变量名不能使用bash中的关键字<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a=1</div><div class="line"><span class="built_in">echo</span> <span class="variable">$a</span> \\打印出1</div><div class="line">a=<span class="variable">$a</span>+1</div><div class="line"><span class="built_in">echo</span> <span class="variable">$a</span> \\打印出1+1</div></pre></td></tr></table></figure></p>
 <p>bash里可以用(())来执行C风格的算术表达式，比如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var=0</div><div class="line">(( var += 1)) \\var现在是1</div><div class="line">(( var++ ))  \\var现在是2</div><div class="line">((var = var * var)) \\var现在是4</div><div class="line"><span class="built_in">let</span> <span class="string">'var = var/3'</span>  \\var现在是1</div><div class="line"><span class="built_in">echo</span> $((var +=2 ))  \\var现在是3</div></pre></td></tr></table></figure></p>
 <p>转成C之后空格可以被忽略了</p>
+<p>只读变量readonly<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a=12</div><div class="line"><span class="built_in">readonly</span> a</div><div class="line">a=22 \\执行这句会报错，因为a是只读变量</div></pre></td></tr></table></figure></p>
+<p>变量类型</p>
+<ul>
+<li><p>局部变量<br>脚本或命令中定义，仅在当前shell实例中有效，其他shell程序不能访问</p>
+</li>
+<li><p>环境变量<br>所有程序都能访问环境变量，有些程序需要环境变量来保证正常运行</p>
+</li>
+<li><p>shell变量<br>shell程序自带的变量</p>
+</li>
+</ul>
 <h2 id="Shell的流程控制"><a href="#Shell的流程控制" class="headerlink" title="Shell的流程控制"></a>Shell的流程控制</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>if表达式如果条件命令组为真，则执行then后的部分，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span></div><div class="line">    判断命令，可有多个，真假取最后的返回值</div><div class="line"><span class="keyword">then</span></div><div class="line">    如果上述<span class="keyword">if</span>为真做什么</div><div class="line"><span class="keyword">elif</span></div><div class="line">    如果上述<span class="keyword">if</span>为假，继续来做判断</div><div class="line"><span class="keyword">then</span></div><div class="line">    <span class="keyword">elif</span>为真做什么</div><div class="line"><span class="keyword">else</span></div><div class="line">    如果全都为假做什么</div><div class="line"><span class="keyword">fi</span> \\结束</div></pre></td></tr></table></figure></p>
-<p>常用条件测试语句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="_">-f</span> <span class="string">"filename"</span></div><div class="line">    判断是否是一个文件</div><div class="line">-x <span class="string">"/bin/ls"</span></div><div class="line">    判断/bin/ls是否存在并拥有可执行权限</div><div class="line">-n <span class="string">"<span class="variable">$var</span>"</span></div><div class="line">    判断<span class="variable">$var</span>变量是否有值</div><div class="line"><span class="string">"<span class="variable">$a</span>"</span> == <span class="string">"<span class="variable">$b</span>"</span></div><div class="line">    判断<span class="variable">$a</span>和<span class="variable">$b</span>是否相等</div></pre></td></tr></table></figure></p>
-<p>使用help [[和man test命令可查询用法</p>
+<h3 id="Exit-Status"><a href="#Exit-Status" class="headerlink" title="Exit Status"></a>Exit Status</h3><p>每条shell命令执行完之后都有一个返回值，这是一个介于0~255之间的值，0表示命令执行成功，非0表示命令执行失败，通过下面例子可以观察一下。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">root@ubuntu:~<span class="comment"># ls </span></div><div class="line">home  test.db  tfcard</div><div class="line">root@ubuntu:~<span class="comment"># echo $?</span></div><div class="line">0</div><div class="line">root@ubuntu:~<span class="comment"># cd /bin/usr</span></div><div class="line">-bash: <span class="built_in">cd</span>: /bin/usr: No such file or directory</div><div class="line">root@ubuntu:~<span class="comment"># echo $?</span></div><div class="line">1</div></pre></td></tr></table></figure>
+<p>true和false命令除了以0和一个非零值退出之外什么也不做。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># true</span></div><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># echo $?</span></div><div class="line">0</div><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># false</span></div><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># echo $?</span></div><div class="line">1</div></pre></td></tr></table></figure></p>
+<p>true以0值退出，false以非零值退出。</p>
+<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p>test配合if语句来完成true/false判断，test有两种语法格式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">test</span> expression \\First form</div><div class="line"></div><div class="line">[ expression ]  \\Second form</div></pre></td></tr></table></figure>
+<p>如果表达式为真，test以0值退出，否则以值1退出。</p>
+<p>常用条件测试语句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="_">-d</span> <span class="string">"filename"</span></div><div class="line">    判断filename是否是一个目录</div><div class="line"><span class="_">-e</span> <span class="string">"filename"</span></div><div class="line">    判断filename是否存在</div><div class="line"><span class="_">-f</span> <span class="string">"filename"</span></div><div class="line">    判断是否是一个文件</div><div class="line">-L <span class="string">"filename"</span></div><div class="line">    判断filename是否是一个符号链接</div><div class="line">-r <span class="string">"filename"</span></div><div class="line">    判断filename是否对当前用户可读</div><div class="line">-w <span class="string">"filename"</span></div><div class="line">    判断filename是否对当前用户可写</div><div class="line">-x <span class="string">"/bin/ls"</span></div><div class="line">    判断/bin/ls是否存并对当前用户可执行</div><div class="line">-n <span class="string">"<span class="variable">$var</span>"</span></div><div class="line">    判断<span class="variable">$var</span>变量是否为空，如果不为空则真</div><div class="line">-z <span class="string">"<span class="variable">$var</span>"</span></div><div class="line">    判断<span class="variable">$var</span>变量是否为空，如果空则真</div><div class="line"><span class="string">"<span class="variable">$a</span>"</span> == <span class="string">"<span class="variable">$b</span>"</span></div><div class="line">    判断<span class="variable">$a</span>和<span class="variable">$b</span>是否相等</div><div class="line">file1 -nt file2</div><div class="line">    如果file1的修改时间比file2的新，则为真(newer than)</div><div class="line">file1 -ot file2</div><div class="line">    older than</div></pre></td></tr></table></figure></p>
+<p>使用help [[ 、help [和man test查看如何使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$&#123;SHELL&#125;</span>"</span> == <span class="string">"/bin/bash"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">"your login shell is the bash"</span></div><div class="line"><span class="keyword">else</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">"your login shell is not bash"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<p>这里面的空格比较重要，漏掉空格会报语法错误。分号为命令分隔符，使用分号后可以在一行中输入多条命令。</p>
+<h3 id="Exit"><a href="#Exit" class="headerlink" title="Exit"></a>Exit</h3><p>脚本结束时设置一个退出状态值是一个好的编程习惯。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span> 0</div></pre></td></tr></table></figure></p>
+<p>退出脚本并设置退出状态值为0（表示成功）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span> 1</div></pre></td></tr></table></figure>
+<p>退出脚本并设置退出状态值为1（表示失败）。</p>
+<h3 id="test-for-root"><a href="#test-for-root" class="headerlink" title="test for root"></a>test for root</h3><p>测试当前用户是否为超级用户（root）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[me@linuxbox me]$ id -u</div><div class="line">501</div><div class="line">[me@linuxbox me]$ su</div><div class="line">Password:</div><div class="line">[root@linuxbox me]<span class="comment"># id -u</span></div><div class="line">0</div></pre></td></tr></table></figure></p>
+<p>id -u 命令将显示数字化的用户id（当前用户），当输出为0时表示当前用户为root用户。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> [ $(id -u) = <span class="string">"0"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">"superuser"</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> [ $(id -u) != <span class="string">"0"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">"You must be the superuser to run this script"</span> &gt;&amp;2</div><div class="line">    <span class="built_in">exit</span> 1</div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<p>第一个if测试当前用户是否为superuser，如果是则打印”superuser”.<br>第二个id测试当前用户是否为superuser，如果不是则打印出详细信息并将脚本退出状态置为1.<br>“&gt;&amp;2”表示将输出重定向到标准错误中。&amp;2是为了区分2这个文件。</p>
 
       
     </div>
@@ -486,7 +514,7 @@ shebang也可以引用任何系统中的程序来执行文件12#!/">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell的流程控制"><span class="nav-number">2.</span> <span class="nav-text">Shell的流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if语句"><span class="nav-number">2.1.</span> <span class="nav-text">if语句</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell的流程控制"><span class="nav-number">2.</span> <span class="nav-text">Shell的流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if语句"><span class="nav-number">2.1.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exit-Status"><span class="nav-number">2.2.</span> <span class="nav-text">Exit Status</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test"><span class="nav-number">2.3.</span> <span class="nav-text">test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Exit"><span class="nav-number">2.4.</span> <span class="nav-text">Exit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test-for-root"><span class="nav-number">2.5.</span> <span class="nav-text">test for root</span></a></li></ol></li></ol></div>
             
 
           </div>
