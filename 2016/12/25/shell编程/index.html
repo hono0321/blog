@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="shell,编程," />
+  <meta name="keywords" content="linux,shell,编程," />
 
 
 
@@ -96,7 +96,7 @@
 使用文本编辑器编写shell脚本时，需要在第一行添加如下行：1#!/bin/bash
 这行称为shebang(#she ！bang)，指引系统使用符号后面所跟的shell程序运行文件。一般情况下也可写作如下形式：1#!/usr/bin/evn python
 这种写法以为使用环境变量中的pyhton程序">
-<meta property="og:updated_time" content="2016-12-29T15:32:40.468Z">
+<meta property="og:updated_time" content="2017-01-01T07:57:06.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell编程学习笔记（一）">
 <meta name="twitter:description" content="Shell编程学习笔记和备忘，通过学习和记录了解Linux Shell和Shell编程相关知识。
@@ -350,7 +350,7 @@
 <p>常用条件测试语句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="_">-d</span> <span class="string">"filename"</span></div><div class="line">    判断filename是否是一个目录</div><div class="line"><span class="_">-e</span> <span class="string">"filename"</span></div><div class="line">    判断filename是否存在</div><div class="line"><span class="_">-f</span> <span class="string">"filename"</span></div><div class="line">    判断是否是一个文件</div><div class="line">-L <span class="string">"filename"</span></div><div class="line">    判断filename是否是一个符号链接</div><div class="line">-r <span class="string">"filename"</span></div><div class="line">    判断filename是否对当前用户可读</div><div class="line">-w <span class="string">"filename"</span></div><div class="line">    判断filename是否对当前用户可写</div><div class="line">-x <span class="string">"/bin/ls"</span></div><div class="line">    判断/bin/ls是否存并对当前用户可执行</div><div class="line">-n <span class="string">"<span class="variable">$var</span>"</span></div><div class="line">    判断<span class="variable">$var</span>变量是否为空，如果不为空则真</div><div class="line">-z <span class="string">"<span class="variable">$var</span>"</span></div><div class="line">    判断<span class="variable">$var</span>变量是否为空，如果空则真</div><div class="line"><span class="string">"<span class="variable">$a</span>"</span> == <span class="string">"<span class="variable">$b</span>"</span></div><div class="line">    判断<span class="variable">$a</span>和<span class="variable">$b</span>是否相等</div><div class="line">file1 -nt file2</div><div class="line">    如果file1的修改时间比file2的新，则为真(newer than)</div><div class="line">file1 -ot file2</div><div class="line">    older than</div></pre></td></tr></table></figure></p>
 <p>使用help [[ 、help [和man test查看如何使用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$&#123;SHELL&#125;</span>"</span> == <span class="string">"/bin/bash"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">"your login shell is the bash"</span></div><div class="line"><span class="keyword">else</span></div><div class="line">    <span class="built_in">echo</span> <span class="string">"your login shell is not bash"</span></div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
-<p>这里面的空格比较重要，漏掉空格会报语法错误。分号为命令分隔符，使用分号后可以在一行中输入多条命令。</p>
+<p>这里面的空格比较重要，漏掉空格会报语法错误。分号为命令分隔符，使用分号后可以在一行中输入多条命令。<br>[符号在shell中表示测试即test。</p>
 <h3 id="Exit"><a href="#Exit" class="headerlink" title="Exit"></a>Exit</h3><p>脚本结束时设置一个退出状态值是一个好的编程习惯。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span> 0</div></pre></td></tr></table></figure></p>
 <p>退出脚本并设置退出状态值为0（表示成功）。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">exit</span> 1</div></pre></td></tr></table></figure>
@@ -382,6 +382,8 @@
       
         <div class="post-tags">
           
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
             <a href="/tags/shell/" rel="tag"># shell</a>
           
             <a href="/tags/编程/" rel="tag"># 编程</a>
@@ -402,6 +404,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/01/shell编程二/" rel="prev" title="Shell编程学习笔记（二）">
+                Shell编程学习笔记（二） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -469,7 +475,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -479,7 +485,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -535,7 +541,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
