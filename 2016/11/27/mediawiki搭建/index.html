@@ -88,7 +88,7 @@
 准备工作Linux环境准备用的是ubuntu14.04 
 安装文件下载XAMPP 下载链接
 bitnami预集成mediawiki软件包 下载链接
-XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
+XAMPPXAMPP代表Apache、MYSQL、PHP,是一个PHP和Per">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu环境下MediaWiki搭建及配置">
 <meta property="og:url" content="http://yoursite.com/2016/11/27/mediawiki搭建/index.html">
@@ -97,15 +97,15 @@ XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
 准备工作Linux环境准备用的是ubuntu14.04 
 安装文件下载XAMPP 下载链接
 bitnami预集成mediawiki软件包 下载链接
-XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
-<meta property="og:updated_time" content="2017-01-03T14:18:06.784Z">
+XAMPPXAMPP代表Apache、MYSQL、PHP,是一个PHP和Per">
+<meta property="og:updated_time" content="2017-01-15T13:57:05.289Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu环境下MediaWiki搭建及配置">
 <meta name="twitter:description" content="mediawiki官方有手动搭建文档，但比较繁琐且中文翻译质量一般，容易绕晕。官方提供可使用一个预集成的mediawiki软件包跳过手动搭建，过程还算简单，这里简单介绍下。
 准备工作Linux环境准备用的是ubuntu14.04 
 安装文件下载XAMPP 下载链接
 bitnami预集成mediawiki软件包 下载链接
-XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
+XAMPPXAMPP代表Apache、MYSQL、PHP,是一个PHP和Per">
 
 
 
@@ -327,10 +327,14 @@ XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="Linux环境准备"><a href="#Linux环境准备" class="headerlink" title="Linux环境准备"></a>Linux环境准备</h3><p>用的是ubuntu14.04 </p>
 <h3 id="安装文件下载"><a href="#安装文件下载" class="headerlink" title="安装文件下载"></a>安装文件下载</h3><p>XAMPP <a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="external">下载链接</a></p>
 <p>bitnami预集成mediawiki软件包 <a href="https://bitnami.com/stack/xampp#mediawiki" target="_blank" rel="external">下载链接</a></p>
-<p><strong>XAMPP</strong><br>XAMPP代表Apache、MYSQL、PHP,支持Linux、Windows和MacOS</p>
-<p><strong>Bitnami</strong><br>Bitnami提供了各种在XAMPP上快速部署PHP应用的软件包，这里用的是mediawiki</p>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><h3 id="安装XAMPP"><a href="#安装XAMPP" class="headerlink" title="安装XAMPP"></a>安装XAMPP</h3><p>将下载的安装文件拷贝至系统，追加可执行权限后直接运行，默认安装至/opt/lampp目录下。安装过程一路yes即可。</p>
-<p>、、、bash</p>
+<p><strong>XAMPP</strong><br>XAMPP代表Apache、MYSQL、PHP,是一个PHP和Perl的集成开发环境，X表示支持Linux、Windows和MacOS</p>
+<p><strong>Bitnami</strong><br>Bitnami提供了各种在XAMPP上快速部署PHP应用的软件包，恰好提供了mediawiki这个应用，安装并经过简单配置后就可以使用了。</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><h3 id="安装XAMPP"><a href="#安装XAMPP" class="headerlink" title="安装XAMPP"></a>安装XAMPP</h3><p>将下载的安装文件拷贝至Ubuntu，追加可执行权限后直接运行，默认安装至/opt/lampp目录下即可。安装过程一路yes即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:~/tfcard<span class="comment"># ./xampp-linux-x64-5.6.28-1-installer.run </span></div><div class="line">----------------------------------------------------------------------------</div><div class="line">Welcome to the XAMPP Setup Wizard.</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">Select the components you want to install; clear the components you <span class="keyword">do</span> not want </div><div class="line">to install. Click Next when you are ready to continue.</div><div class="line"></div><div class="line">XAMPP Core Files : Y (Cannot be edited)</div><div class="line"></div><div class="line">XAMPP Developer Files [Y/n] :y</div><div class="line"></div><div class="line">Is the selection above correct? [Y/n]: y</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">Installation Directory</div><div class="line"></div><div class="line">XAMPP will be installed to /opt/lampp</div><div class="line">Press [Enter] to <span class="built_in">continue</span>:</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">Setup is now ready to begin installing XAMPP on your computer.</div><div class="line"></div><div class="line">Do you want to <span class="built_in">continue</span>? [Y/n]: y</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">Please <span class="built_in">wait</span> <span class="keyword">while</span> Setup installs XAMPP on your computer.</div><div class="line"></div><div class="line"> Installing</div><div class="line"> 0% ______________ 50% ______________ 100%</div><div class="line"> <span class="comment">#########################################</span></div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">Setup has finished installing XAMPP on your computer.</div></pre></td></tr></table></figure>
+<p>安装完之后需要启动相关服务，就是apache、mysql和PHP。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:~/tfcard<span class="comment"># /opt/lampp/lampp start</span></div></pre></td></tr></table></figure></p>
+<p>这里只要确保apache和mysql正常启动就可以了，启动之后可以访问主机IP看下主页是否正常显示，正常的话会显示xampp默认页面，表示安装成功。<br>之后继续安装mediawiki</p>
+<h3 id="安装mediawiki"><a href="#安装mediawiki" class="headerlink" title="安装mediawiki"></a>安装mediawiki</h3><p>给安装包可执行权限，直接运行安装，语言包选中文，后面根据情况配置即可，用户名是登录mediawiki用的，密码需要大于等于8位。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:~/tfcard<span class="comment"># ./bitnami-mediawiki-1.28.0-0-module-linux-x64-installer.run </span></div><div class="line">Language Selection</div><div class="line"></div><div class="line">Please select the installation language</div><div class="line">[1] English - English</div><div class="line">[2] Spanish - Español</div><div class="line">[3] Simplified Chinese - 简体中文</div><div class="line">Please choose an option [1] : 3</div><div class="line">----------------------------------------------------------------------------</div><div class="line">欢迎来到 Bitnami MediaWiki Module 安装程序。</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">安装文件夹</div><div class="line"></div><div class="line">请选择Bitnami or XAMPP的安装目录</div><div class="line"></div><div class="line">选择一个文件夹 [/opt/lampp]: </div><div class="line"></div><div class="line">Note: This module requires a pre-existing installation of Bitnami or a </div><div class="line">Bitnami-compatible stack like XAMPP. Please select the previous platform </div><div class="line">installation. For example: /opt/bitnami or /opt/lampp</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">创建管理员帐户</div><div class="line"></div><div class="line">登录 [user]: admin</div><div class="line"></div><div class="line">您的真实姓名 [User Name]: admin</div><div class="line"></div><div class="line">Email地址 [user@example.com]: </div><div class="line"></div><div class="line">Enter the application password :</div><div class="line">Retype password :</div><div class="line">----------------------------------------------------------------------------</div><div class="line">MediaWiki</div><div class="line"></div><div class="line">请配置MediaWiki安装</div><div class="line"></div><div class="line">Wiki名称 [admin<span class="string">'s Wiki!]: hello world</span></div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">安装程序已经准备好将 Bitnami MediaWiki Module 安装到您的电脑。</div><div class="line"></div><div class="line">您确定要继续吗？ [Y/n]: y</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">正在安装 Bitnami MediaWiki Module 至您的电脑中，请稍候。</div><div class="line"></div><div class="line"> 正在安装</div><div class="line"> 0% ______________ 50% ______________ 100%</div><div class="line"> #########################################</div><div class="line"></div><div class="line">----------------------------------------------------------------------------</div><div class="line">安装程序已经将 Bitnami MediaWiki Module 安装于您的电脑中。</div><div class="line"></div><div class="line">调用 Bitnami MediaWiki Module [Y/n]: y</div></pre></td></tr></table></figure></p>
+<p>安装完成后在访问主机IP，在右上applications中可以看到mediawiki，点击access访问wiki首页。</p>
 
       
     </div>
@@ -445,7 +449,7 @@ XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -455,7 +459,7 @@ XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -490,7 +494,7 @@ XAMPPXAMPP代表Apache、MYSQL、PHP,支持Linux、Wi">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux环境准备"><span class="nav-number">1.1.</span> <span class="nav-text">Linux环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装文件下载"><span class="nav-number">1.2.</span> <span class="nav-text">安装文件下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始安装"><span class="nav-number">2.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装XAMPP"><span class="nav-number">2.1.</span> <span class="nav-text">安装XAMPP</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux环境准备"><span class="nav-number">1.1.</span> <span class="nav-text">Linux环境准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装文件下载"><span class="nav-number">1.2.</span> <span class="nav-text">安装文件下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始安装"><span class="nav-number">2.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装XAMPP"><span class="nav-number">2.1.</span> <span class="nav-text">安装XAMPP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装mediawiki"><span class="nav-number">2.2.</span> <span class="nav-text">安装mediawiki</span></a></li></ol></li></ol></div>
             
 
           </div>

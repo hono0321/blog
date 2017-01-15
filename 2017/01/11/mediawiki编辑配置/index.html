@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux,配置," />
+  <meta name="keywords" content="配置,mediawiki,编辑," />
 
 
 
@@ -84,34 +84,16 @@
 
 
 
-<meta name="description" content="CentOS 7修改主机名不在是直接修改hostname文件，而是使用如下命令
-1$ hostnamectl set-hostname xxxx
-其中xxxx为修改的主机名
-修改完成后，使用如下命令查看是否修改成功
-1$ hostnamectl status
-应该会打印一些信息
-修改主机名后不会马上显示出来，此时只需退出再登录即可，无需重启系统。">
+<meta name="description" content="mediawiki刚搭建好后默认WikiEditor扩展插件默认不启用。编辑功能比较简单。这里配置一下这个功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS 7修改主机名">
-<meta property="og:url" content="http://yoursite.com/2016/12/04/CentOS7修改主机名/index.html">
+<meta property="og:title" content="MediaWiki编辑配置">
+<meta property="og:url" content="http://yoursite.com/2017/01/11/mediawiki编辑配置/index.html">
 <meta property="og:site_name" content="二喵的博客">
-<meta property="og:description" content="CentOS 7修改主机名不在是直接修改hostname文件，而是使用如下命令
-1$ hostnamectl set-hostname xxxx
-其中xxxx为修改的主机名
-修改完成后，使用如下命令查看是否修改成功
-1$ hostnamectl status
-应该会打印一些信息
-修改主机名后不会马上显示出来，此时只需退出再登录即可，无需重启系统。">
-<meta property="og:updated_time" content="2017-01-03T14:17:38.754Z">
+<meta property="og:description" content="mediawiki刚搭建好后默认WikiEditor扩展插件默认不启用。编辑功能比较简单。这里配置一下这个功能。">
+<meta property="og:updated_time" content="2017-01-15T14:00:22.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS 7修改主机名">
-<meta name="twitter:description" content="CentOS 7修改主机名不在是直接修改hostname文件，而是使用如下命令
-1$ hostnamectl set-hostname xxxx
-其中xxxx为修改的主机名
-修改完成后，使用如下命令查看是否修改成功
-1$ hostnamectl status
-应该会打印一些信息
-修改主机名后不会马上显示出来，此时只需退出再登录即可，无需重启系统。">
+<meta name="twitter:title" content="MediaWiki编辑配置">
+<meta name="twitter:description" content="mediawiki刚搭建好后默认WikiEditor扩展插件默认不启用。编辑功能比较简单。这里配置一下这个功能。">
 
 
 
@@ -139,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/04/CentOS7修改主机名/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/11/mediawiki编辑配置/"/>
 
 
 
 
 
-  <title> CentOS 7修改主机名 | 二喵的博客 </title>
+  <title> MediaWiki编辑配置 | 二喵的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +238,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/04/CentOS7修改主机名/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/11/mediawiki编辑配置/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="hono">
@@ -280,7 +262,7 @@
             
             
               
-                CentOS 7修改主机名
+                MediaWiki编辑配置
               
             
           </h1>
@@ -293,8 +275,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-04T00:00:00+08:00">
-                2016-12-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-11T20:56:35+08:00">
+                2017-01-11
               </time>
             
 
@@ -329,13 +311,23 @@
       
 
       
-        <p>CentOS 7修改主机名不在是直接修改hostname文件，而是使用如下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hostnamectl <span class="built_in">set</span>-hostname xxxx</div></pre></td></tr></table></figure>
-<p>其中xxxx为修改的主机名</p>
-<p>修改完成后，使用如下命令查看是否修改成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hostnamectl status</div></pre></td></tr></table></figure>
-<p>应该会打印一些信息</p>
-<p>修改主机名后不会马上显示出来，此时只需退出再登录即可，无需重启系统。</p>
+        <p>mediawiki刚搭建好后默认WikiEditor扩展插件默认不启用。编辑功能比较简单。<br>这里配置一下这个功能。<a id="more"></a></p>
+<ul>
+<li>首先确认下wiki安装目录的extentions路径下是否有WikiEditor这个文件夹。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">root@hi:/opt/lampp/apps/mediawiki/htdocs/extensions<span class="comment"># ls</span></div><div class="line">Cite          Gadgets   Interwiki           ParserFunctions  README         SyntaxHighlight_GeSHi</div><div class="line">CiteThisPage  ImageMap  LocalisationUpdate  PdfHandler       Renameuser     TitleBlacklist</div><div class="line">ConfirmEdit   InputBox  Nuke                Poem             SpamBlacklist  WikiEditor</div><div class="line">root@hi:/opt/lampp/apps/mediawiki/htdocs/extensions<span class="comment"># cd WikiEditor/</span></div><div class="line">root@hi:/opt/lampp/apps/mediawiki/htdocs/extensions/WikiEditor<span class="comment"># ls</span></div><div class="line">composer.json  extension.json  i18n     phpcs.xml  tests                 WikiEditor.php</div><div class="line">COPYING        Gruntfile.js    modules  README     WikiEditor.hooks.php</div><div class="line">root@hi:/opt/lampp/apps/mediawiki/htdocs/extensions/WikiEditor<span class="comment">#</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>比较新的版本应该都是自带WikiEditor的，如果安装目录下没有需下载。<br><a href="https://www.mediawiki.org/wiki/Special:ExtensionDistributor/WikiEditor" target="_blank" rel="external">下载链接</a><br>文件下载后放置extensions/文件夹中的WikiEditor目录内。</p>
+<ul>
+<li>确认WikiEditor目录后，将以下配置写入LocalSettings.php文件。<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">wfLoadExtension( <span class="string">'WikiEditor'</span> );</div><div class="line"></div><div class="line"><span class="comment"># Enables use of WikiEditor by default but still allows users to disable it in preferences</span></div><div class="line"><span class="variable">$wgDefaultUserOptions</span>[<span class="string">'usebetatoolbar'</span>] = 1;</div><div class="line"></div><div class="line"><span class="comment"># Enables link and table wizards by default but still allows users to disable them in preferences</span></div><div class="line"><span class="variable">$wgDefaultUserOptions</span>[<span class="string">'usebetatoolbar-cgd'</span>] = 1;</div><div class="line"></div><div class="line"><span class="comment"># Displays the Preview and Changes tabs</span></div><div class="line"><span class="variable">$wgDefaultUserOptions</span>[<span class="string">'wikieditor-preview'</span>] = 1;</div><div class="line"></div><div class="line"><span class="comment"># Displays the Publish and Cancel buttons on the top right side</span></div><div class="line"><span class="variable">$wgDefaultUserOptions</span>[<span class="string">'wikieditor-publish'</span>] = 1;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>至此，配置完成。</p>
+<p>配置完成后可能出现图片显示出错的情况，提示如下错误信息。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">生成缩略图出错：/bin/bash: /bin/convert: No such file or directory Error code:127</div></pre></td></tr></table></figure></p>
+<p>首先确认是否配置如下配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$wgUseImageMagick</span> = <span class="literal">true</span>;  </div><div class="line"><span class="variable">$wgImageMagickConvertCommand</span> = <span class="string">"/usr/bin/convert"</span>;</div></pre></td></tr></table></figure></p>
+<p>确认系统中是否有convert程序，主要是/usr/bin/目录/bin目录下是否有这个文件，如果没有就执行命令安装：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install ImageMagic</div></pre></td></tr></table></figure></p>
+<p>安装完成后，确认convert程序路径是否为配置路径，然后刷新页面即可。</p>
+<p><a href="https://www.mediawiki.org/wiki/Extension:WikiEditor/zh" target="_blank" rel="external">参考链接</a><br><a href="http://blog.csdn.net/loveaborn/article/details/44080043" target="_blank" rel="external">参考链接</a></p>
+<h2 id="上传目录"><a href="#上传目录" class="headerlink" title="上传目录"></a>上传目录</h2><p>如果未启用LocalSettings.php文件中的$wgHashedUploadDirectory这个参数，那么上传的图片将被分发到$wgUploadDirectory目录的子目录中，并基于文件的MD5<br>值的前两个字符作为目录名来存储，例如$IP/images/a/ab/foo.jpg这种形式。这些子目录都是自动创建的，采用这种方式可以避免过多的图片存储在一个目录下，从而<br>影响性能。如果wiki环境比较简单，存储的图片较少，则可以直接将$wgHashedUploadDirectory这个参数值设置为false，这样图片将全部会存储在$wgUploadDirectory<br>指定的目录下，默认情况下这个目录为images/目录。<br>但需要注意的是，如果从后台将图片上传到images/目录下并在前台使用名称引用，这样是不能正常显示图片的，应该是因为mediawiki是通过MD5值来唯一标识图片。</p>
 
       
     </div>
@@ -359,9 +351,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
             <a href="/tags/配置/" rel="tag"># 配置</a>
+          
+            <a href="/tags/mediawiki/" rel="tag"># mediawiki</a>
+          
+            <a href="/tags/编辑/" rel="tag"># 编辑</a>
           
         </div>
       
@@ -370,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/27/mediawiki搭建/" rel="next" title="Ubuntu环境下MediaWiki搭建及配置">
-                <i class="fa fa-chevron-left"></i> Ubuntu环境下MediaWiki搭建及配置
+              <a href="/2017/01/07/shell stdin stdout stderr/" rel="next" title="Shell标准输入输出及错误输出">
+                <i class="fa fa-chevron-left"></i> Shell标准输入输出及错误输出
               </a>
             
           </div>
@@ -380,8 +374,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/25/shell编程/" rel="prev" title="Shell编程学习笔记（一）">
-                Shell编程学习笔记（一） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/15/mediawiki使用指导/" rel="prev" title="mediawiki使用指导">
+                mediawiki使用指导 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -429,8 +423,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/images.jpg"
@@ -476,6 +479,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#上传目录"><span class="nav-number">1.</span> <span class="nav-text">上传目录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
