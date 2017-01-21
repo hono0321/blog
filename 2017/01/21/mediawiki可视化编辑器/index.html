@@ -1,0 +1,677 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="VisualEditor,MediaWiki,Parsoid,nodejs," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="VE这个组件点比较多，不像其他组件配起来还是有点复杂的，这里记录下配置过程以备忘。
+
+系统版本：ubuntu16.04
+mediawiki版本：1.28
+
+下载VE组件安装包下载链接下载完成后将tar.gz压缩包解压至mediawiki的extensions/目录下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MediaWiki可视化编辑器配置">
+<meta property="og:url" content="http://yoursite.com/2017/01/21/mediawiki可视化编辑器/index.html">
+<meta property="og:site_name" content="二喵的博客">
+<meta property="og:description" content="VE这个组件点比较多，不像其他组件配起来还是有点复杂的，这里记录下配置过程以备忘。
+
+系统版本：ubuntu16.04
+mediawiki版本：1.28
+
+下载VE组件安装包下载链接下载完成后将tar.gz压缩包解压至mediawiki的extensions/目录下">
+<meta property="og:updated_time" content="2017-01-21T11:15:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MediaWiki可视化编辑器配置">
+<meta name="twitter:description" content="VE这个组件点比较多，不像其他组件配起来还是有点复杂的，这里记录下配置过程以备忘。
+
+系统版本：ubuntu16.04
+mediawiki版本：1.28
+
+下载VE组件安装包下载链接下载完成后将tar.gz压缩包解压至mediawiki的extensions/目录下">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/21/mediawiki可视化编辑器/"/>
+
+
+
+
+
+  <title> MediaWiki可视化编辑器配置 | 二喵的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">二喵的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">哈哈哈</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/21/mediawiki可视化编辑器/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="hono">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/images.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="二喵的博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="二喵的博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                MediaWiki可视化编辑器配置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-21T19:15:17+08:00">
+                2017-01-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">更新于</span>
+              <time title="更新于" itemprop="dateModified" datetime="2017-01-21T19:15:22+08:00">
+                2017-01-21
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>VE这个组件点比较多，不像其他组件配起来还是有点复杂的，这里记录下配置过程以备忘。</p>
+<ul>
+<li>系统版本：ubuntu16.04</li>
+<li>mediawiki版本：1.28</li>
+</ul>
+<h2 id="下载VE组件安装包"><a href="#下载VE组件安装包" class="headerlink" title="下载VE组件安装包"></a>下载VE组件安装包</h2><p><a href="https://www.mediawiki.org/wiki/Special:ExtensionDistributor/VisualEditor" target="_blank" rel="external">下载链接</a><br>下载完成后将tar.gz压缩包解压至mediawiki的extensions/目录下<a id="more"></a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar xzvf VisualEditor-REL1_28-93528b7.tar.gz -C /opt/lampp/apps/mediawiki/htdocs/extensions</div></pre></td></tr></table></figure>
+<h2 id="配置VisualEditor"><a href="#配置VisualEditor" class="headerlink" title="配置VisualEditor"></a>配置VisualEditor</h2><h3 id="配置Parsoid服务"><a href="#配置Parsoid服务" class="headerlink" title="配置Parsoid服务"></a>配置Parsoid服务</h3><p>如果不配置Parsoid Node.js服务，将不能使用VisualEditor编辑和保存已创建的页面。也就是说只能新建一个页面编辑，但不能保存也不能编辑已有页面。</p>
+<p>Parsoid服务貌似是用来转换HTML和wiki文本的，以便用VE编辑显示。</p>
+<h3 id="安装Parsoid"><a href="#安装Parsoid" class="headerlink" title="安装Parsoid"></a>安装Parsoid</h3><p>配置VE前需要先安装Parsoid服务<br>导入gpg key</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># apt-key advanced --keyserver pgp.mit.edu --recv-keys 90E9F83F22250DD7</span></div><div class="line">Executing: /tmp/tmp.qTyLJ4Gtgg/gpg.1.sh --keyserver</div><div class="line">pgp.mit.edu</div><div class="line">--recv-keys</div><div class="line">90E9F83F22250DD7</div><div class="line">gpg: requesting key 22250DD7 from hkp server pgp.mit.edu</div><div class="line">gpg: key 22250DD7: public key <span class="string">"MediaWiki releases repository &lt;wikitech-l@lists.wikimedia.org&gt;"</span> imported</div><div class="line">gpg: Total number processed: 1</div><div class="line">gpg:               imported: 1  (RSA: 1)</div></pre></td></tr></table></figure>
+<p>增加wikimedia库(不造啥意思，按教程来的)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># apt-add-repository "deb https://releases.wikimedia.org/debian jessie-mediawiki main"</span></div></pre></td></tr></table></figure>
+<p>安装Parsoid</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># apt-get install apt-transport-httpsReading package lists... Done</span></div><div class="line">Building dependency tree       </div><div class="line">Reading state information... Done</div><div class="line">apt-transport-https is already the newest version (1.2.19).</div><div class="line">0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.</div><div class="line">root@pad-vbox-ubuntu:~<span class="comment"># apt-get update &amp;&amp; sudo apt-get install parsoid</span></div></pre></td></tr></table></figure>
+<p>更新安装打印信息太多了不贴了</p>
+<p>修改parsoid配置文件/etc/mediawiki/parsoid/config.yaml<br>将uri: ‘<a href="http://localhost/mediawiki/api.php&#39;修改为指向wiki的api。" target="_blank" rel="external">http://localhost/mediawiki/api.php&#39;修改为指向wiki的api。</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">        <span class="comment"># Configure Parsoid to point to your MediaWiki instances.</span></div><div class="line">        mwApis:</div><div class="line">        - <span class="comment"># This is the only required parameter,</span></div><div class="line">          <span class="comment"># the URL of you MediaWiki API endpoint.</span></div><div class="line">          uri: <span class="string">'http://localhost/mediawiki/api.php'</span></div><div class="line">          <span class="comment"># The "domain" is used for communication with Visual Editor</span></div><div class="line">          <span class="comment"># and RESTBase.  It defaults to the hostname portion of</span></div><div class="line">          <span class="comment"># the `uri` property below, but you can manually set it</span></div><div class="line">          <span class="comment"># to an arbitrary string.</span></div><div class="line">          domain: <span class="string">'localhost'</span>  <span class="comment"># optional</span></div><div class="line">          <span class="comment"># To specify a proxy (or proxy headers) specific to this prefix</span></div><div class="line">          <span class="comment"># (which overrides defaultAPIProxyURI). Alternatively, set `proxy`</span></div><div class="line">          <span class="comment"># to `null` to override and force no proxying when a default proxy</span></div><div class="line">...</div></pre></td></tr></table></figure>
+<p>修改配置文件/etc/meddiawiki/parsoid/settings.js,加入以下配置。这个文件如果不存在请手动在该路径下创建并添加以下内容。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parsoidConfig.setMwApi(&#123; uri: <span class="string">'https://localhost/mediawiki/api.php'</span>, prefix: <span class="string">'localhost'</span>, domain: <span class="string">'localhost'</span> &#125;);</div></pre></td></tr></table></figure>
+<p>以上配置完成之后重启parsoid服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">root@pad-vbox-ubuntu:/etc/mediawiki/parsoid<span class="comment"># service parsoid restart </span></div><div class="line">root@pad-vbox-ubuntu:/etc/mediawiki/parsoid<span class="comment">#</span></div></pre></td></tr></table></figure></p>
+<h2 id="配置VE"><a href="#配置VE" class="headerlink" title="配置VE"></a>配置VE</h2><p>这个就比较简单了，将以下内容追加至配置文件LocalSettings.php的末尾。</p>
+<ul>
+<li>配置启用VE</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">wfLoadExtension( <span class="string">'VisualEditor'</span> );</div><div class="line"></div><div class="line">// Enable by default <span class="keyword">for</span> everybody</div><div class="line"><span class="variable">$wgDefaultUserOptions</span>[<span class="string">'visualeditor-enable'</span>] = 1;</div><div class="line"></div><div class="line">// Optional: Set VisualEditor as the default <span class="keyword">for</span> anonymous users</div><div class="line">// otherwise they will have to switch to VE</div><div class="line">// <span class="variable">$wgDefaultUserOptions</span>[<span class="string">'visualeditor-editor'</span>] = <span class="string">"visualeditor"</span>;</div><div class="line"></div><div class="line">// Don<span class="string">'t allow users to disable it</span></div><div class="line">$wgHiddenPrefs[] = 'visualeditor-enable<span class="string">';</span></div><div class="line"></div><div class="line">// OPTIONAL: Enable VisualEditor's experimental code features</div><div class="line"><span class="comment">#$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>配置VE连接parsoid</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$wgVirtualRestConfig</span>[<span class="string">'modules'</span>][<span class="string">'parsoid'</span>] = array(</div><div class="line">        // URL to the Parsoid instance</div><div class="line">        // Use port 8142 <span class="keyword">if</span> you use the Debian package</div><div class="line">        <span class="string">'url'</span> =&gt; <span class="string">'http://localhost:8142'</span>,</div><div class="line">        // Parsoid <span class="string">"domain"</span>, see below (optional)</div><div class="line">        <span class="string">'domain'</span> =&gt; <span class="string">'localhost'</span>,</div><div class="line">        // Parsoid <span class="string">"prefix"</span>, see below (optional)</div><div class="line">        <span class="string">'prefix'</span> =&gt; <span class="string">'localhost'</span></div><div class="line">);</div></pre></td></tr></table></figure>
+<p>ok了，应该可以正常使用了。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://www.mediawiki.org/wiki/Extension:VisualEditor" target="_blank" rel="external">https://www.mediawiki.org/wiki/Extension:VisualEditor</a><br><a href="https://www.mediawiki.org/wiki/Parsoid/Setup" target="_blank" rel="external">https://www.mediawiki.org/wiki/Parsoid/Setup</a><br><a href="https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/zh" target="_blank" rel="external">https://www.mediawiki.org/wiki/Help:VisualEditor/User_guide/zh</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VisualEditor/" rel="tag"># VisualEditor</a>
+          
+            <a href="/tags/MediaWiki/" rel="tag"># MediaWiki</a>
+          
+            <a href="/tags/Parsoid/" rel="tag"># Parsoid</a>
+          
+            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/15/git入门/" rel="next" title="git入门">
+                <i class="fa fa-chevron-left"></i> git入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/21/sed命令学习/" rel="prev" title="sed命令学习">
+                sed命令学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/images.jpg"
+               alt="hono" />
+          <p class="site-author-name" itemprop="name">hono</p>
+          <p class="site-description motion-element" itemprop="description">哈哈</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载VE组件安装包"><span class="nav-number">1.</span> <span class="nav-text">下载VE组件安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置VisualEditor"><span class="nav-number">2.</span> <span class="nav-text">配置VisualEditor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Parsoid服务"><span class="nav-number">2.1.</span> <span class="nav-text">配置Parsoid服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Parsoid"><span class="nav-number">2.2.</span> <span class="nav-text">安装Parsoid</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置VE"><span class="nav-number">3.</span> <span class="nav-text">配置VE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hono</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
