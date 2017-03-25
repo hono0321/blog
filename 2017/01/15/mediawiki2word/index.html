@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mediawiki,使用指南," />
 
 
 
@@ -84,19 +84,22 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="word2wiki需求是将现有word文档迁移到wiki网站中。word转wiki方法有几种但效果都一般，对样式特别复杂的word来说基本都不能保持一致，且工作量较大并不推荐，学习了几种方法记录以备忘。
+VisualEditorVE是个编辑器，可以直接将word中的内容复制粘贴至wiki中，大部分格式都能保存完整，包括表格，但图片和高级的样式不支持。
+word2mediawikiPlus这个组件现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/07/16/hello-world/index.html">
+<meta property="og:title" content="mediawiki之word转换">
+<meta property="og:url" content="http://yoursite.com/2017/01/15/mediawiki2word/index.html">
 <meta property="og:site_name" content="二喵的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-01-21T04:55:20.818Z">
+<meta property="og:description" content="word2wiki需求是将现有word文档迁移到wiki网站中。word转wiki方法有几种但效果都一般，对样式特别复杂的word来说基本都不能保持一致，且工作量较大并不推荐，学习了几种方法记录以备忘。
+VisualEditorVE是个编辑器，可以直接将word中的内容复制粘贴至wiki中，大部分格式都能保存完整，包括表格，但图片和高级的样式不支持。
+word2mediawikiPlus这个组件现">
+<meta property="og:updated_time" content="2017-01-21T05:29:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="mediawiki之word转换">
+<meta name="twitter:description" content="word2wiki需求是将现有word文档迁移到wiki网站中。word转wiki方法有几种但效果都一般，对样式特别复杂的word来说基本都不能保持一致，且工作量较大并不推荐，学习了几种方法记录以备忘。
+VisualEditorVE是个编辑器，可以直接将word中的内容复制粘贴至wiki中，大部分格式都能保存完整，包括表格，但图片和高级的样式不支持。
+word2mediawikiPlus这个组件现">
 
 
 
@@ -124,13 +127,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/16/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/15/mediawiki2word/"/>
 
 
 
 
 
-  <title> Hello World | 二喵的博客 </title>
+  <title> mediawiki之word转换 | 二喵的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -241,7 +244,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/16/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/15/mediawiki2word/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="hono">
@@ -265,7 +268,7 @@ Quick">
             
             
               
-                Hello World
+                mediawiki之word转换
               
             
           </h1>
@@ -278,8 +281,8 @@ Quick">
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-16T12:54:54+08:00">
-                2016-07-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-15T21:58:42+08:00">
+                2017-01-15
               </time>
             
 
@@ -292,7 +295,7 @@ Quick">
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               <span class="post-meta-item-text">更新于</span>
-              <time title="更新于" itemprop="dateModified" datetime="2017-01-21T12:55:20+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-01-21T13:29:01+08:00">
                 2017-01-21
               </time>
             
@@ -324,15 +327,25 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="word2wiki"><a href="#word2wiki" class="headerlink" title="word2wiki"></a>word2wiki</h2><p>需求是将现有word文档迁移到wiki网站中。<br>word转wiki方法有几种但效果都一般，对样式特别复杂的word来说基本都不能保持一致，且工作量较大并不推荐，学习了几种方法记录以备忘。</p>
+<h3 id="VisualEditor"><a href="#VisualEditor" class="headerlink" title="VisualEditor"></a>VisualEditor</h3><p>VE是个编辑器，可以直接将word中的内容复制粘贴至wiki中，大部分格式都能保存完整，包括表格，但图片和高级的样式不支持。</p>
+<h3 id="word2mediawikiPlus"><a href="#word2mediawikiPlus" class="headerlink" title="word2mediawikiPlus"></a>word2mediawikiPlus</h3><p>这个组件现在已经不维护了，但可能还能正常工作。也是一个扩展组件。</p>
+<h3 id="Microsoft-office-word-add-in-for-mediawiki"><a href="#Microsoft-office-word-add-in-for-mediawiki" class="headerlink" title="Microsoft office word add-in for mediawiki"></a>Microsoft office word add-in for mediawiki</h3><p>Microsoft的一款插件，支持 office word 2007及以上版本。使用时将word文档保存为mediawiki类型的文件，是一个txt格式的文本。<br>然后将txt拷贝至wiki中。</p>
+<h4 id="存在的问题："><a href="#存在的问题：" class="headerlink" title="存在的问题："></a>存在的问题：</h4><ul>
+<li>不能处理图片。但在图片位置会生成占位符。</li>
+<li>一些脚注之类的格式不能转换，包含这些格式转换时将报错。</li>
+<li>部分文本将包含<nowiki>的标签。</nowiki></li>
+<li>最后，这个插件主要适用于不熟悉mediawiki标记语言的场景，比如初学者，适用于简单格式的word文本。</li>
+</ul>
+<h3 id="LibreOffice"><a href="#LibreOffice" class="headerlink" title="LibreOffice"></a>LibreOffice</h3><p>LibreOffice可以直接将word文档发布到mediawiki网站上，不过复杂格式和图片都不支持。<br>表格不支持，图片不支持 。</p>
+<h3 id="word-gt-html-gt-mediawiki"><a href="#word-gt-html-gt-mediawiki" class="headerlink" title="word-&gt;html-&gt;mediawiki"></a>word-&gt;html-&gt;mediawiki</h3><ul>
+<li>将word文档另存为html文件</li>
+<li>使用文本编辑器打开html，复制粘贴源码到<a href="https://tools.wmflabs.org/magnustools/html2wiki.php" target="_blank" rel="external">这个链接</a>中转换成wiki标记。</li>
+<li>将处理好的wiki标记文本粘贴到wiki网站中。</li>
+</ul>
+<p>特点：比较麻烦，效果不理想。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这几种方法都先后试了下，但效果都非常不理想，主要是原word文档中文本样式复杂，如果转换处理的话，工作量可能比直接复制粘贴处理成wiki格式还要大，<br>并且当前较多的样式都基本不能恢复，而且目前重点也不在样式上，所以就学习了下wiki的标记语言，其实也不复杂。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://en.wikipedia.org/wiki/Help:WordToWiki" target="_blank" rel="external">https://en.wikipedia.org/wiki/Help:WordToWiki</a></p>
 
       
     </div>
@@ -354,10 +367,22 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/mediawiki/" rel="tag"># mediawiki</a>
+          
+            <a href="/tags/使用指南/" rel="tag"># 使用指南</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/11/mediawiki编辑配置/" rel="next" title="MediaWiki编辑配置">
+                <i class="fa fa-chevron-left"></i> MediaWiki编辑配置
+              </a>
             
           </div>
 
@@ -365,8 +390,8 @@ Quick">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/27/mediawiki搭建/" rel="prev" title="Ubuntu环境下MediaWiki搭建及配置">
-                Ubuntu环境下MediaWiki搭建及配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/15/git入门/" rel="prev" title="git入门">
+                git入门 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -480,7 +505,7 @@ Quick">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#word2wiki"><span class="nav-number">1.</span> <span class="nav-text">word2wiki</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VisualEditor"><span class="nav-number">1.1.</span> <span class="nav-text">VisualEditor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word2mediawikiPlus"><span class="nav-number">1.2.</span> <span class="nav-text">word2mediawikiPlus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microsoft-office-word-add-in-for-mediawiki"><span class="nav-number">1.3.</span> <span class="nav-text">Microsoft office word add-in for mediawiki</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存在的问题："><span class="nav-number">1.3.1.</span> <span class="nav-text">存在的问题：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LibreOffice"><span class="nav-number">1.4.</span> <span class="nav-text">LibreOffice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#word-gt-html-gt-mediawiki"><span class="nav-number">1.5.</span> <span class="nav-text">word->html->mediawiki</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
